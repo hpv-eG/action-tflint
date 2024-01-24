@@ -4,6 +4,7 @@
 set -Eeuo pipefail
 
 cd "${GITHUB_WORKSPACE}/${INPUT_WORKING_DIRECTORY}" || exit
+terraform init
 
 echo '::group::Preparing'
   unameOS="$(uname -s)"
